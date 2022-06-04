@@ -1,0 +1,125 @@
+-- auto-generated definition
+create table chat_rooms_info
+(
+    chat_Rooms_ID int      not null,
+    user_ID       int      not null,
+    last_seen     datetime not null,
+    primary key (user_ID, chat_Rooms_ID),
+    constraint chat_rooms_info_ibfk_1
+        foreign key (user_ID) references chat_user (user_ID),
+    constraint chat_rooms_info_ibfk_2
+        foreign key (chat_Rooms_ID) references chat_rooms (chat_Rooms_ID)
+);
+
+create index chat_Rooms_ID
+    on chat_rooms_info (chat_Rooms_ID);
+
+#####################################################################
+
+-- auto-generated definition
+create table chat_rooms
+(
+    chat_Rooms_ID   int auto_increment
+        primary key,
+    chat_Room_type  tinyint(1)   not null,
+    chat_room_photo longblob     null,
+    chat_room_name  varchar(100) null
+);
+
+#####################################################################
+
+-- auto-generated definition
+create table chat_user
+(
+    user_ID       int auto_increment
+        primary key,
+    mobile_number varchar(11) not null,
+    user_password varchar(20) not null,
+    first_name    varchar(20) not null,
+    Last_name     varchar(17) null,
+    constraint mobile_number
+        unique (mobile_number)
+);
+
+#####################################################################
+
+-- auto-generated definition
+create table contacts
+(
+    user_ID int         not null,
+    contact varchar(11) not null,
+    primary key (user_ID, contact),
+    constraint contacts_ibfk_1
+        foreign key (user_ID) references chat_user (user_ID),
+    constraint contacts_ibfk_2
+        foreign key (contact) references chat_user (mobile_number)
+);
+
+create index contact_ID
+    on contacts (contact);
+
+#####################################################################
+
+-- auto-generated definition
+create table message
+(
+    message_ID    int auto_increment
+        primary key,
+    user_ID       int          not null,
+    chat_Rooms_ID int          not null,
+    messageText   varchar(500) not null,
+    massageTime   datetime     not null,
+    constraint message_ibfk_1
+        foreign key (user_ID) references chat_user (user_ID),
+    constraint message_ibfk_2
+        foreign key (chat_Rooms_ID) references chat_rooms (chat_Rooms_ID)
+);
+
+create index chat_Rooms_ID
+    on message (chat_Rooms_ID);
+
+create index user_ID
+    on message (user_ID);
+
+#####################################################################
+
+-- auto-generated definition
+create table status
+(
+    message_ID      int auto_increment
+        primary key,
+    staus_type      tinyint(1) not null,
+    time_of_message time       not null,
+    date_of_message date       not null,
+    constraint status_ibfk_1
+        foreign key (message_ID) references message (message_ID)
+);
+
+####################################################################
+
+-- auto-generated definition
+create table story
+(
+    user_ID     int          not null,
+    story_time  datetime     not null,
+    story_text  varchar(155) null,
+    story_photo longblob     null,
+    primary key (user_ID, story_time),
+    constraint story_ibfk_1
+        foreign key (user_ID) references chat_user (user_ID)
+);
+
+###################################################################
+
+-- auto-generated definition
+create table user_profile_description
+(
+    user_ID           int          not null
+        primary key,
+    visibilty         tinyint(1)   not null,
+    personal_photo    longblob     null,
+    About_description varchar(255) null,
+    constraint user_profile_description_ibfk_1
+        foreign key (user_ID) references chat_user (user_ID)
+);
+

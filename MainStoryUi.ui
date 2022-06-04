@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainStoriesWindow</class>
+ <widget class="QWidget" name="MainStoriesWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1124</width>
+    <height>714</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(11, 20, 26);</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QWidget" name="MainStoriesWindowWidget" native="true">
+     <property name="styleSheet">
+      <string notr="true">QWidget#widget
+{
+background-color: rgb(30, 38, 44);}
+
+QScrollArea{
+border: none;
+}
+
+QScrollBar:vertical{
+border: none;
+background-color: #0b141b;
+width: 18px;
+border-radius: 0px;
+margin: 10px 0px 10px 0px;
+}
+
+QScrollBar::handle:vertical{
+background-color: #00a884;
+border: none;
+border-radius: 9px;
+min-height: 20px;
+max-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover{
+background-color: #CFD3CE;
+}
+
+QScrollBar::handle:vertical:pressed{
+background-color: #00a884;
+}
+
+QScrollBar::sub-line:vertical{
+border: none;
+height: 15px;
+background-color: #00a884;
+subcontrol-position: top;
+subcontrol-origin: margin;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+}
+
+QScrollBar::add-line:vertical{
+border: none;
+height: 15px;
+background-color: #00a884;
+subcontrol-position: bottom;
+subcontrol-origin: margin;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+QScrollBar::sub-line:vertical:hover{
+background-color: #CFD3CE;
+}
+
+QScrollBar::add-line:vertical:hover{
+background-color: #CFD3CE;
+}
+
+QScrollBar::sub-line:vertical:pressed{
+background-color: #00a884;
+}
+
+QScrollBar::add-line:vertical:pressed{
+background-color: #00a884;
+}
+
+QScrollBar::up-arrow:vertica, QScrollBar::down-arrow:vertical{
+background: none;
+}
+
+QScrollBar::add-page:vertical , QScrollBar::sub-page:vertical{
+background: none;
+}</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3" columnstretch="6,11">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item row="0" column="1">
+       <layout class="QGridLayout" name="DisplayGridLayout" rowstretch="11,0">
+        <item row="1" column="0">
+         <widget class="QLabel" name="Display">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>14</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image:url(:/newPrefix/Icons/WhatsappWebStoryPage.jpg);
+font: 14pt &quot;Arial&quot;;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="scaledContents">
+           <bool>false</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QProgressBar" name="StoryDuration">
+          <property name="styleSheet">
+           <string notr="true">QProgressBar{
+border: none;
+background-color: #0b141b;
+height: 8px;
+}
+
+QProgressBar::chunk{
+background-color: #00a884;
+}</string>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+          <property name="textVisible">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="0">
+       <widget class="QWidget" name="StoriesAndOptionsGridLayout" native="true">
+        <property name="styleSheet">
+         <string notr="true">
+QWidget#widget
+{
+background-color: rgb(30, 38, 44);}
+</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4" rowstretch="1,2,8">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item row="2" column="0">
+          <widget class="QScrollArea" name="scrollArea">
+           <property name="styleSheet">
+            <string notr="true">QScrollArea{
+border: none;
+}
+
+QScrollBar:vertical{
+border: none;
+background-color: #0b141b;
+width: 18px;
+border-radius: 0px;
+margin: 10px 0px 10px 0px;
+}
+
+QScrollBar::handle:vertical{
+background-color: #00a884;
+border: none;
+border-radius: 9px;
+min-height: 20px;
+max-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover{
+background-color: #CFD3CE;
+}
+
+QScrollBar::handle:vertical:pressed{
+background-color: #00a884;
+}
+
+QScrollBar::sub-line:vertical{
+border: none;
+height: 15px;
+background-color: #00a884;
+subcontrol-position: top;
+subcontrol-origin: margin;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+}
+
+QScrollBar::add-line:vertical{
+border: none;
+height: 15px;
+background-color: #00a884;
+subcontrol-position: bottom;
+subcontrol-origin: margin;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+QScrollBar::sub-line:vertical:hover{
+background-color: #CFD3CE;
+}
+
+QScrollBar::add-line:vertical:hover{
+background-color: #CFD3CE;
+}
+
+QScrollBar::sub-line:vertical:pressed{
+background-color: #00a884;
+}
+
+QScrollBar::add-line:vertical:pressed{
+background-color: #00a884;
+}
+
+QScrollBar::up-arrow:vertica, QScrollBar::down-arrow:vertical{
+background: none;
+}
+
+QScrollBar::add-page:vertical , QScrollBar::sub-page:vertical{
+background: none;
+}</string>
+           </property>
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>397</width>
+              <height>596</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(30, 38, 44);</string>
+            </property>
+            <layout class="QVBoxLayout" name="scrollAreaContent"/>
+           </widget>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPushButton" name="Spacer">
+           <property name="minimumSize">
+            <size>
+             <width>8</width>
+             <height>1</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>2</height>
+            </size>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton#Spacer
+
+{
+background-color: rgb(255, 255, 255);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QWidget" name="OptionsGridLayout" native="true">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(30, 38, 44);</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_5">
+            <property name="leftMargin">
+             <number>10</number>
+            </property>
+            <property name="topMargin">
+             <number>10</number>
+            </property>
+            <property name="rightMargin">
+             <number>10</number>
+            </property>
+            <property name="bottomMargin">
+             <number>10</number>
+            </property>
+            <property name="horizontalSpacing">
+             <number>5</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <layout class="QVBoxLayout" name="BackButtonVerticalLayout">
+              <item>
+               <widget class="QPushButton" name="Back">
+                <property name="minimumSize">
+                 <size>
+                  <width>44</width>
+                  <height>44</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>44</width>
+                  <height>44</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Back</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton#Back{
+border: none;
+}</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="resource.qrc">
+                  <normaloff>:/newPrefix/Icons/55ovjpq6bo1dpbpq69e2m1lvrq.png</normaloff>:/newPrefix/Icons/55ovjpq6bo1dpbpq69e2m1lvrq.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>26</width>
+                  <height>26</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="0" column="3">
+             <layout class="QVBoxLayout" name="AddStoriesVerticalLayout">
+              <item>
+               <widget class="QPushButton" name="AddStoryText">
+                <property name="minimumSize">
+                 <size>
+                  <width>44</width>
+                  <height>44</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>44</width>
+                  <height>44</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Add Text Story</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton#AddStoryText{
+border: none;
+border-radius: 22px;
+background-color: none;
+}
+
+QPushButton#AddStoryText:hover{
+background-color: #CFD3CE;
+}
+
+QPushButton#AddStoryText:pressed{
+background-color: #00a884;
+}</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="resource.qrc">
+                  <normaloff>:/newPrefix/Icons/circle-compose-draw-edit-write-icon-728133.png</normaloff>:/newPrefix/Icons/circle-compose-draw-edit-write-icon-728133.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>40</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="AddStoryImage">
+                <property name="minimumSize">
+                 <size>
+                  <width>44</width>
+                  <height>44</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>44</width>
+                  <height>44</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Add Image Story</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton#AddStoryImage{
+border: none;
+border-radius: 22px;
+background-color: none;
+}
+
+QPushButton#AddStoryImage:hover{
+background-color: #CFD3CE;
+}
+
+QPushButton#AddStoryImage:pressed{
+background-color: #00a884;
+}</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="resource.qrc">
+                  <normaloff>:/newPrefix/Icons/camera.png</normaloff>:/newPrefix/Icons/camera.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>40</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="Status">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>12</pointsize>
+                <weight>75</weight>
+                <italic>true</italic>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: white;</string>
+              </property>
+              <property name="text">
+               <string>  My Status</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="OwnerImage">
+              <property name="minimumSize">
+               <size>
+                <width>80</width>
+                <height>80</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>80</width>
+                <height>80</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border-image: url(:/newPrefix/Icons/1.jpg);
+border-radius: 40;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

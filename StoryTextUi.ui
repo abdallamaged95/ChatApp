@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddTextStoryWindow</class>
+ <widget class="QWidget" name="AddTextStoryWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>667</width>
+    <height>477</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QWidget" name="AddTextStoryWindowWidget" native="true">
+     <property name="styleSheet">
+      <string notr="true">QWidget#AddTextStoryWindowWidget{
+background-color: rgb(38, 44, 58);
+}
+
+QScrollBar:vertical{
+border: none;
+background-color: #0b141b;
+width: 18px;
+border-radius: 0px;
+margin: 10px 0px 10px 0px;
+}
+
+QScrollBar::handle:vertical{
+background-color: #00a884;
+border: none;
+border-radius: 3px;
+min-height: 20px;
+max-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover{
+background-color: #CFD3CE;
+}
+
+QScrollBar::handle:vertical:pressed{
+background-color: #00a884;
+}
+
+QScrollBar::sub-line:vertical{
+border: none;
+height: 15px;
+background-color: #00a884;
+subcontrol-position: top;
+subcontrol-origin: margin;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+}
+
+QScrollBar::add-line:vertical{
+border: none;
+height: 15px;
+background-color: #00a884;
+subcontrol-position: bottom;
+subcontrol-origin: margin;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+QScrollBar::sub-line:vertical:hover{
+background-color: #CFD3CE;
+}
+
+QScrollBar::add-line:vertical:hover{
+background-color: #CFD3CE;
+}
+
+QScrollBar::sub-line:vertical:pressed{
+background-color: #00a884;
+}
+
+QScrollBar::add-line:vertical:pressed{
+background-color: #00a884;
+}
+
+QScrollBar::up-arrow:vertica, QScrollBar::down-arrow:vertical{
+background: none;
+}
+
+QScrollBar::add-page:vertical , QScrollBar::sub-page:vertical{
+background: none;
+}</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2" rowstretch="12,2" rowminimumheight="2,8">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item row="1" column="0">
+       <widget class="QWidget" name="LineEditAndButtonWidget" native="true">
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QPlainTextEdit" name="TextEntry">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPlainTextEdit{border:none;
+background-color: rgb(54, 69, 79);
+border:6px solid black;
+border-color: rgba(0, 0, 0, 0);
+border-radius: 13px;
+color:rgb(255, 255, 255);
+font-size:19px;
+}
+
+QScrollArea{
+border: none;
+}
+
+QScrollBar:vertical{
+border: none;
+background-color: #0b141b;
+width: 18px;
+border-radius: 0px;
+margin: 10px 0px 10px 0px;
+}
+
+QScrollBar::handle:vertical{
+background-color: #00a884;
+border: none;
+border-radius: 9px;
+min-height: 20px;
+max-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover{
+background-color: #CFD3CE;
+}
+
+QScrollBar::handle:vertical:pressed{
+background-color: #00a884;
+}
+
+QScrollBar::sub-line:vertical{
+border: none;
+height: 15px;
+background-color: #00a884;
+subcontrol-position: top;
+subcontrol-origin: margin;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+}
+
+QScrollBar::add-line:vertical{
+border: none;
+height: 10px;
+background-color: #00a884;
+subcontrol-position: bottom;
+subcontrol-origin: margin;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+QScrollBar::sub-line:vertical:hover{
+background-color: #CFD3CE;
+}
+
+QScrollBar::add-line:vertical:hover{
+background-color: #CFD3CE;
+}
+
+QScrollBar::sub-line:vertical:pressed{
+background-color: #00a884;
+}
+
+QScrollBar::add-line:vertical:pressed{
+background-color: #00a884;
+}
+
+QScrollBar::up-arrow:vertica, QScrollBar::down-arrow:vertical{
+background: none;
+}
+
+QScrollBar::add-page:vertical , QScrollBar::sub-page:vertical{
+background: none;
+}</string>
+           </property>
+           <property name="tabStopWidth">
+            <number>80</number>
+           </property>
+           <property name="placeholderText">
+            <string>Enter Your Text</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="SubmitButton">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton#SubmitButton{
+border: none;
+border-radius: 30px;
+background-color: none;
+}
+
+QPushButton#SubmitButton:hover{
+background-color: #CFD3CE;
+}
+
+QPushButton#SubmitButton:pressed{
+background-color: #00a884;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/newPrefix/Icons/WhatsApp Image 2022-05-08 at 2.03.18 AM-modified.png</normaloff>:/newPrefix/Icons/WhatsApp Image 2022-05-08 at 2.03.18 AM-modified.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>55</width>
+             <height>55</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="BackgroundImageLabel">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(30, 38, 44);
+border-image:url(:/newPrefix/Icons/Screenshot_2022-05-08_230119.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
